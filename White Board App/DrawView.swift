@@ -12,15 +12,6 @@ class DrawView: UIView {
 
     var lines: [Line] = []
     var lastPoint: CGPoint!
-
-    
-
-/*  ---> Not Required
-     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
-    }
-*/
     
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -28,18 +19,6 @@ class DrawView: UIView {
     }
      
 
- 
- 
-/* -->>  Modeled after stuff online:
-     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let touch = touches.first {
-            lastPoint = touch.locationInView(self)
-            print("\(lastPoint)")
-        }
-    }
-    
-*/
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let newPoint = touches.first?.locationInView(self)
